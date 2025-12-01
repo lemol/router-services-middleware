@@ -31,13 +31,11 @@
       "./package.json": "./package.json"
     }
   },
-  "dependencies": {
-    "fetch-router-extra": "github:lemol/fetch-router-extra"
-  },
   "devDependencies": {
     "@remix-run/async-context-middleware": "^0.1.0",
     "@remix-run/fetch-router": "^0.12.0",
     "@types/node": "^24.10.1",
+    "fetch-router-extra": "github:lemol/fetch-router-extra",
     "typescript": "^5.9.3",
     "zod": "^4.1.13"
   },
