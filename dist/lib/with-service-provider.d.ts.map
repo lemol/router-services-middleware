@@ -1,0 +1,1 @@
+{"version":3,"file":"with-service-provider.d.ts","sourceRoot":"","sources":["../../src/lib/with-service-provider.ts"],"names":[],"mappings":"AAGA,OAAO,KAAK,EAAE,UAAU,EAAE,MAAM,oBAAoB,CAAA;AAEpD,OAAO,KAAK,EAAE,eAAe,EAAE,MAAM,uBAAuB,CAAA;AAI5D;;;;;;;;;GASG;AACH,wBAAgB,mBAAmB,CAAC,eAAe,EAAE,eAAe,GAAG,UAAU,CAKhF;AAED;;;;;GAKG;AACH,wBAAgB,kBAAkB,IAAI,eAAe,CAUpD"}

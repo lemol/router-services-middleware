@@ -1,0 +1,112 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@standard-schema/spec':
+        specifier: ^1.0.0
+        version: 1.0.0
+    devDependencies:
+      '@remix-run/async-context-middleware':
+        specifier: ^0.1.0
+        version: 0.1.0(@remix-run/fetch-router@0.12.0(@remix-run/headers@0.17.2)(@remix-run/route-pattern@0.15.3)(@remix-run/session@0.4.0))
+      '@remix-run/fetch-router':
+        specifier: ^0.12.0
+        version: 0.12.0(@remix-run/headers@0.17.2)(@remix-run/route-pattern@0.15.3)(@remix-run/session@0.4.0)
+      '@types/node':
+        specifier: ^24.6.0
+        version: 24.10.1
+      fetch-router-extra:
+        specifier: https://github.com/lemol/fetch-router-extra
+        version: https://codeload.github.com/lemol/fetch-router-extra/tar.gz/a71bd384327ffd8ee86f03ede224eaf4d2125b14(@remix-run/fetch-router@0.12.0(@remix-run/headers@0.17.2)(@remix-run/route-pattern@0.15.3)(@remix-run/session@0.4.0))
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+      zod:
+        specifier: ^4.1.13
+        version: 4.1.13
+
+packages:
+
+  '@remix-run/async-context-middleware@0.1.0':
+    resolution: {integrity: sha512-P3GkszIEuQ+5Xe3To3g0kwr09bZ4fJGu3z57QavrkDxndvyo4uuVD+UsDhyWMJ3zKsXu4cX00fRbHwFT58c1iw==}
+    peerDependencies:
+      '@remix-run/fetch-router': ^0.9.0
+
+  '@remix-run/fetch-router@0.12.0':
+    resolution: {integrity: sha512-BDG/VepZg2ZJ7wav3HDrB9ZJLpzZONHi9ItOkFMcKsrbm5g7jjrxW5Vdijbbebz12pbJQu6VKTwLVXp/LgFusA==}
+    peerDependencies:
+      '@remix-run/headers': ^0.17.2
+      '@remix-run/route-pattern': ^0.15.3
+      '@remix-run/session': ^0.4.0
+
+  '@remix-run/headers@0.17.2':
+    resolution: {integrity: sha512-IfHVCftsRKfk7kIQUxP9WDCe0OXj9X0lDRfFxk3CPcXJenBUEsYEPeBoW/YCZlKhdRWZjQlrofdk63lMSJmy8w==}
+
+  '@remix-run/route-pattern@0.15.3':
+    resolution: {integrity: sha512-7s4Oy9q6Oz9Vfwg0iZscpmYVASNG9fLqbCa+YY0+SWKksDpvCRiW46xp3S3zEvT7zEP7G55FKA+JdrqqK2AOXw==}
+
+  '@remix-run/session@0.4.0':
+    resolution: {integrity: sha512-xDOPFllrjaEvIekzRfqO8VG2DsFfVasSjB49ElH4nR31YsqEGDCwCmK4GWSv/GsS1Bo+0JRHmIBTNdvNORLp7A==}
+
+  '@standard-schema/spec@1.0.0':
+    resolution: {integrity: sha512-m2bOd0f2RT9k8QJx1JN85cZYyH1RqFBdlwtkSlf4tBDYLCiiZnv1fIIwacK6cqwXavOydf0NPToMQgpKq+dVlA==}
+
+  '@types/node@24.10.1':
+    resolution: {integrity: sha512-GNWcUTRBgIRJD5zj+Tq0fKOJ5XZajIiBroOF0yvj2bSU1WvNdYS/dn9UxwsujGW4JX06dnHyjV2y9rRaybH0iQ==}
+
+  fetch-router-extra@https://codeload.github.com/lemol/fetch-router-extra/tar.gz/a71bd384327ffd8ee86f03ede224eaf4d2125b14:
+    resolution: {tarball: https://codeload.github.com/lemol/fetch-router-extra/tar.gz/a71bd384327ffd8ee86f03ede224eaf4d2125b14}
+    version: 0.1.0
+    peerDependencies:
+      '@remix-run/fetch-router': ^0.12.0
+
+  typescript@5.9.3:
+    resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
+  undici-types@7.16.0:
+    resolution: {integrity: sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==}
+
+  zod@4.1.13:
+    resolution: {integrity: sha512-AvvthqfqrAhNH9dnfmrfKzX5upOdjUVJYFqNSlkmGf64gRaTzlPwz99IHYnVs28qYAybvAlBV+H7pn0saFY4Ig==}
+
+snapshots:
+
+  '@remix-run/async-context-middleware@0.1.0(@remix-run/fetch-router@0.12.0(@remix-run/headers@0.17.2)(@remix-run/route-pattern@0.15.3)(@remix-run/session@0.4.0))':
+    dependencies:
+      '@remix-run/fetch-router': 0.12.0(@remix-run/headers@0.17.2)(@remix-run/route-pattern@0.15.3)(@remix-run/session@0.4.0)
+
+  '@remix-run/fetch-router@0.12.0(@remix-run/headers@0.17.2)(@remix-run/route-pattern@0.15.3)(@remix-run/session@0.4.0)':
+    dependencies:
+      '@remix-run/headers': 0.17.2
+      '@remix-run/route-pattern': 0.15.3
+      '@remix-run/session': 0.4.0
+
+  '@remix-run/headers@0.17.2': {}
+
+  '@remix-run/route-pattern@0.15.3': {}
+
+  '@remix-run/session@0.4.0': {}
+
+  '@standard-schema/spec@1.0.0': {}
+
+  '@types/node@24.10.1':
+    dependencies:
+      undici-types: 7.16.0
+
+  fetch-router-extra@https://codeload.github.com/lemol/fetch-router-extra/tar.gz/a71bd384327ffd8ee86f03ede224eaf4d2125b14(@remix-run/fetch-router@0.12.0(@remix-run/headers@0.17.2)(@remix-run/route-pattern@0.15.3)(@remix-run/session@0.4.0)):
+    dependencies:
+      '@remix-run/fetch-router': 0.12.0(@remix-run/headers@0.17.2)(@remix-run/route-pattern@0.15.3)(@remix-run/session@0.4.0)
+
+  typescript@5.9.3: {}
+
+  undici-types@7.16.0: {}
+
+  zod@4.1.13: {}
