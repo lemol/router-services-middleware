@@ -32,20 +32,18 @@
     }
   },
   "dependencies": {
-    "@standard-schema/spec": "^1.0.0"
+    "fetch-router-extra": "github:lemol/fetch-router-extra"
   },
   "devDependencies": {
     "@remix-run/async-context-middleware": "^0.1.0",
     "@remix-run/fetch-router": "^0.12.0",
-    "@types/node": "^24.6.0",
-    "fetch-router-extra": "https://github.com/lemol/fetch-router-extra",
+    "@types/node": "^24.10.1",
     "typescript": "^5.9.3",
     "zod": "^4.1.13"
   },
   "peerDependencies": {
     "@remix-run/async-context-middleware": "^0.1.0",
-    "@remix-run/fetch-router": "^0.12.0",
-    "fetch-router-extra": "*"
+    "@remix-run/fetch-router": "^0.12.0"
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",

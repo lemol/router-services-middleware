@@ -8,9 +8,9 @@ importers:
 
   .:
     dependencies:
-      '@standard-schema/spec':
-        specifier: ^1.0.0
-        version: 1.0.0
+      fetch-router-extra:
+        specifier: github:lemol/fetch-router-extra
+        version: https://codeload.github.com/lemol/fetch-router-extra/tar.gz/a71bd384327ffd8ee86f03ede224eaf4d2125b14(@remix-run/fetch-router@0.12.0(@remix-run/headers@0.17.2)(@remix-run/route-pattern@0.15.3)(@remix-run/session@0.4.0))
     devDependencies:
       '@remix-run/async-context-middleware':
         specifier: ^0.1.0
@@ -19,11 +19,8 @@ importers:
         specifier: ^0.12.0
         version: 0.12.0(@remix-run/headers@0.17.2)(@remix-run/route-pattern@0.15.3)(@remix-run/session@0.4.0)
       '@types/node':
-        specifier: ^24.6.0
+        specifier: ^24.10.1
         version: 24.10.1
-      fetch-router-extra:
-        specifier: https://github.com/lemol/fetch-router-extra
-        version: https://codeload.github.com/lemol/fetch-router-extra/tar.gz/a71bd384327ffd8ee86f03ede224eaf4d2125b14(@remix-run/fetch-router@0.12.0(@remix-run/headers@0.17.2)(@remix-run/route-pattern@0.15.3)(@remix-run/session@0.4.0))
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -53,9 +50,6 @@ packages:
 
   '@remix-run/session@0.4.0':
     resolution: {integrity: sha512-xDOPFllrjaEvIekzRfqO8VG2DsFfVasSjB49ElH4nR31YsqEGDCwCmK4GWSv/GsS1Bo+0JRHmIBTNdvNORLp7A==}
-
-  '@standard-schema/spec@1.0.0':
-    resolution: {integrity: sha512-m2bOd0f2RT9k8QJx1JN85cZYyH1RqFBdlwtkSlf4tBDYLCiiZnv1fIIwacK6cqwXavOydf0NPToMQgpKq+dVlA==}
 
   '@types/node@24.10.1':
     resolution: {integrity: sha512-GNWcUTRBgIRJD5zj+Tq0fKOJ5XZajIiBroOF0yvj2bSU1WvNdYS/dn9UxwsujGW4JX06dnHyjV2y9rRaybH0iQ==}
@@ -94,8 +88,6 @@ snapshots:
   '@remix-run/route-pattern@0.15.3': {}
 
   '@remix-run/session@0.4.0': {}
-
-  '@standard-schema/spec@1.0.0': {}
 
   '@types/node@24.10.1':
     dependencies:
