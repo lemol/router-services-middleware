@@ -75,7 +75,7 @@ describe('withServices', () => {
       middleware: [
         withServices(catalog.createPost),
       ],
-      handler(context: any) {
+      action(context: any) {
         capturedServices = context.extra.services
         return new Response('OK')
       },
@@ -112,7 +112,7 @@ describe('withServices', () => {
       middleware: [
         withServices(catalog.myService),
       ],
-      handler(context: any) {
+      action(context: any) {
         // Service should not be initialized yet
         assert.equal(initCount, 0)
 
@@ -153,7 +153,7 @@ describe('withServices', () => {
       middleware: [
         withServices(catalog.missingService),
       ],
-      handler(context: any) {
+      action(context: any) {
         assert.throws(
           () => context.extra.services.missingService,
           /No factory registered for service "missingService"/,
@@ -187,7 +187,7 @@ describe('withServices', () => {
       middleware: [
         withServices(catalog.serviceA, catalog.serviceB),
       ],
-      handler(context: any) {
+      action(context: any) {
         assert.equal(context.extra.services.serviceA, 'A')
         assert.equal(context.extra.services.serviceB, 'B')
         return new Response('OK')
@@ -223,7 +223,7 @@ describe('withServices', () => {
       middleware: [
         withServices(catalog.counter),
       ],
-      handler(context: any) {
+      action(context: any) {
         capturedIds.push(context.extra.services.counter.id)
         return new Response('OK')
       },
@@ -259,7 +259,7 @@ describe('withServices', () => {
 
     router.get('/test', {
       middleware: [withServices(catalog.postService, catalog.userService)],
-      handler(context: any) {
+      action(context: any) {
         capturedServices = context.extra.services
         return new Response('OK')
       },
@@ -290,12 +290,10 @@ describe('resolveService', () => {
 
     let resolvedValue: string | null = null
 
-    router.get('/test', {
-      handler() {
-        let service = resolveService(catalog.myService)
-        resolvedValue = service.getValue()
-        return new Response('OK')
-      },
+    router.get('/test', () => {
+      let service = resolveService(catalog.myService)
+      resolvedValue = service.getValue()
+      return new Response('OK')
     })
 
     await router.fetch('https://remix.run/test')
@@ -319,12 +317,10 @@ describe('resolveService', () => {
 
     let resolvedValue: string | null = null
 
-    router.get(routes.posts, {
-      handler() {
-        let service = resolveService<{ getData: () => string }>(routes.posts, 'myService')
-        resolvedValue = service.getData()
-        return new Response('OK')
-      },
+    router.get(routes.posts, () => {
+      let service = resolveService<{ getData: () => string }>(routes.posts, 'myService')
+      resolvedValue = service.getData()
+      return new Response('OK')
     })
 
     await router.fetch('https://remix.run/posts')
@@ -350,13 +346,11 @@ describe('resolveService', () => {
 
     let ids: number[] = []
 
-    router.get('/test', {
-      handler() {
-        ids.push(resolveService(catalog.counter).id)
-        ids.push(resolveService(catalog.counter).id)
-        ids.push(resolveService(catalog.counter).id)
-        return new Response('OK')
-      },
+    router.get('/test', () => {
+      ids.push(resolveService(catalog.counter).id)
+      ids.push(resolveService(catalog.counter).id)
+      ids.push(resolveService(catalog.counter).id)
+      return new Response('OK')
     })
 
     await router.fetch('https://remix.run/test')

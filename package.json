@@ -2,14 +2,14 @@
   "name": "router-services-middleware",
   "version": "0.1.0",
   "description": "Middleware for service injection capabilities in fetch-router",
-  "author": "Leza Lutonda <lemol.leza@gmail.com>",
+  "author": "Michael Jackson <mjijackson@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lemol/router-services-middleware.git",
+    "url": "git+https://github.com/remix-run/remix.git",
     "directory": "packages/router-services-middleware"
   },
-  "homepage": "https://github.com/lemol/router-services-middleware/tree/main/packages/router-services-middleware#readme",
+  "homepage": "https://github.com/remix-run/remix/tree/main/packages/router-services-middleware#readme",
   "files": [
     "LICENSE",
     "README.md",
@@ -31,17 +31,16 @@
       "./package.json": "./package.json"
     }
   },
+  "dependencies": {
+    "@standard-schema/spec": "^1.0.0"
+  },
   "devDependencies": {
     "@remix-run/async-context-middleware": "^0.1.0",
-    "@remix-run/fetch-router": "^0.12.0",
+    "@remix-run/fetch-router": "^0.13.0",
     "@types/node": "^24.10.1",
     "fetch-router-extra": "github:lemol/fetch-router-extra",
     "typescript": "^5.9.3",
     "zod": "^4.1.13"
-  },
-  "peerDependencies": {
-    "@remix-run/async-context-middleware": "^0.1.0",
-    "@remix-run/fetch-router": "^0.12.0"
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",

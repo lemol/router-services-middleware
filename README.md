@@ -11,7 +11,7 @@ Type-safe dependency injection middleware for `@remix-run/fetch-router`.
 ## Installation
 
 ```sh
-npm install @remix-run/router-services-middleware fetch-router-extra @remix-run/async-context-middleware
+npm install @remix-run/router-services-middleware @remix-run/fetch-router-extra @remix-run/async-context-middleware
 ```
 
 ## How It Works
@@ -28,7 +28,7 @@ Use `withServices()` to declare the services your route handler needs. Services 
 
 ```ts
 import { createRouter, route } from '@remix-run/fetch-router'
-import { defineRouter, use } from 'fetch-router-extra'
+import { defineRouter, use } from '@remix-run/fetch-router-extra'
 import { asyncContext } from '@remix-run/async-context-middleware'
 import { withServices, serviceOf, ServiceProvider, withServiceProvider } from '@remix-run/router-services-middleware'
 
@@ -82,7 +82,7 @@ export let serviceProvider = new ServiceProvider(ServiceCatalog)
 
 ```ts
 // routes/posts.ts
-import { defineRouter, use } from 'fetch-router-extra'
+import { defineRouter, use } from '@remix-run/fetch-router-extra'
 import { withServices } from '@remix-run/router-services-middleware'
 import { ServiceCatalog } from '../services'
 
@@ -227,7 +227,7 @@ let createPost = resolveService(routes.posts, 'createPost')
 ## Related Packages
 
 - [`@remix-run/fetch-router`](../fetch-router) - Router for the web Fetch API
-- [`fetch-router-extra`](../fetch-router-extra) - Extra utilities for `@remix-run/fetch-router`
+- [`@remix-run/fetch-router-extra`](../fetch-router-extra) - Extra utilities for `@remix-run/fetch-router`
 - [`@remix-run/async-context-middleware`](../async-context-middleware) - Async context middleware for request-scoped storage
 
 ## License

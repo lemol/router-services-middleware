@@ -3,12 +3,7 @@ import { createStorageKey } from '@remix-run/fetch-router'
 import type { Middleware } from 'fetch-router-extra'
 import type { RequestContext, Route, RequestMethod } from '@remix-run/fetch-router'
 
-import type {
-  ServiceCatalog,
-  ServiceTypes,
-  CatalogEntry,
-  ServiceProvider,
-} from './service-provider.ts'
+import type { CatalogEntry, ServiceProvider } from './service-provider.ts'
 import { getServiceProvider } from './with-service-provider.ts'
 
 type ServiceInstances = Map<string, unknown>
